@@ -18,9 +18,9 @@ return(
                />
     
             <div className="my-user-info">
-                <div className="my-info-item">имя:{personalInfo.userName}</div>
-                <div className="my-info-item">возраст:{personalInfo.age}</div>
-                <div className="my-info-item">о себе:{personalInfo.description}
+                <div className="my-info-item">имя:  {personalInfo.userName}</div>
+                <div className="my-info-item">возраст: {personalInfo.age}</div>
+                <div className="my-info-item">о себе:  {personalInfo.description}
 
                 </div>
             </div>

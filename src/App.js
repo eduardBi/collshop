@@ -1,4 +1,5 @@
 import  React  from 'react';
+import  FOF  from './404.js';
 import ItemList from "./components/ListOFItem/itemList"
 import FrontPage from "./components/ListOFItem/frontPage"
 import SingleIitem from "./components/rewiews/singleItem"
@@ -45,6 +46,7 @@ return(
                         <Route path='/product/:id' exact component={SingleIitem}></Route>
                         <Route path='/buyitem' exact component={BuyItem}></Route>
                          <Route path='/users/:id' exact component={Profile}></Route>
+                         <Route path='*' exact component={FOF}></Route>
 
 
 

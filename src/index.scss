@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-:root{
-    --yellow-basic:#fdfd99;
-    --green-basic:rgba(197, 231, 180,0.5);
-    --yellow-hard:rgba(243, 184, 214,0.5);
-/*    67 71*/
-    --font-color:#1e1f26;
-    
-}
+$yellow-basic:#fdfd99;
+$green-basic:rgba(197, 231, 180,0.5);
+$purple-basic:rgba(243, 184, 214,0.5);
+$font-color:#1e1f26;
+
 
 html{
     font-size: 10px;
@@ -23,12 +20,12 @@ html{
 body{
     margin: 0;
     padding: 0;
-    color:var(--font-color);
+    color: $font-color;
     font-family: 'Roboto', sans-serif;
 }
 
 button{
-    background: var(--yellow-basic);
+    background: $yellow-basic;
 }
 #root{
     margin: 0;
@@ -52,7 +49,7 @@ a:visited{
 
 
 @mixin bordered(){   
-    border: 2px solid var(--yellow-hard);
+    border: 2px solid $purple-basic;
 }
 
 @mixin rounded(){
@@ -89,7 +86,7 @@ nav{
                 line-height: 4rem;
                 transition: all 0.2s ease-in;
                 &:hover{
-                        background: var(--yellow-basic);
+                        background: $yellow-basic;
                 }
             }
         
@@ -111,7 +108,7 @@ nav{
 .nav-wrapper{
     width:100%;
     box-sizing: border-box;
-    background: var(--green-basic);
+    background: $green-basic;
     padding: 1.5rem 0;
 }
 
@@ -120,7 +117,7 @@ nav{
     @include bordered;
     
     width: 60%;
-    background:  var(--yellow-basic);
+    background:  $yellow-basic;
     text-align: center;
     margin: 2rem auto;
     display: block;
@@ -133,13 +130,13 @@ nav{
     @include rounded;
     @include bordered;
     padding: 0 2rem;
-    background:  var(--yellow-basic);
+    background:  $yellow-basic;
     text-align: center;
 }
 
                     //banner of front page
 .banner{
-    background-color: var(--yellow-basic);
+    background-color: $yellow-basic;
     background: url("./components/img/banner.jpg");
     height: 700px;
     background-position: top;
@@ -186,7 +183,7 @@ nav{
     & .burger{
         top: 3.5rem;
         & .burger-item{
-            background:  var(--yellow-basic);
+            background:  $yellow-basic;
                 &:first-child{
                         position: absolute;
                         transform: rotateZ(45deg)  ;
@@ -209,7 +206,7 @@ nav{
 
 
 .list-product-item{
-    background: var(--green-basic);
+    background: $green-basic;
     margin: 2rem 0 ;
     margin-top:0 ;
     width: 100%;
@@ -278,7 +275,7 @@ nav{
 
 
 .list-action-item{
-    background:  var(--yellow-hard);
+    background:  $purple-basic;
     width: 100%;
     margin:0 2rem;
     text-align: center;
@@ -292,7 +289,7 @@ nav{
         margin-right: 0;   
     }
     &:hover{
-       background: var(--yellow-basic);
+       background: $yellow-basic;
        cursor: pointer
     }
 }
@@ -348,7 +345,7 @@ label{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     
     
@@ -359,7 +356,7 @@ label{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-    height: 80vh;
+    height: 100%;
     width:100%;
     margin: 0 auto;
 }
@@ -401,7 +398,7 @@ label{
 /*корзина и лист пожеланий*/
 .wishlist-title{
     font-size: 2rem;
-    background:var(--yellow-basic);
+    background:$yellow-basic;
     display: inline-block;
     padding: 1rem;
     margin: 0;
@@ -412,7 +409,7 @@ label{
 }
 
 .wishlist-wrapper{
-    border: 2px solid var(--yellow-hard);
+    border: 2px solid $purple-basic;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 1rem;
@@ -421,7 +418,7 @@ label{
 /*footer*/
 
 footer{
-    background: var(--yellow-hard);
+    background: $purple-basic;
     position: absolute;
     align-items: center;
     left: 0;
@@ -448,15 +445,18 @@ footer{
                 text-align: center;
                 transition: all 0.3s ;
                         &:hover{
-                        background: var(--yellow-basic);
+                        background:$yellow-basic;
                         }
             }
 }
 /*profile*/
 
 .my-wrapper{
+    margin: 0 auto;
     margin-top: 10rem;
     display: flex;
+    width:90%;
+    
    
 }
 .my-user-pic{
@@ -467,7 +467,7 @@ footer{
     width: 70%;
     display: flex;
     flex-direction: column;
-    padding-left: 10rem;
+    padding-left:5%;
     
 }
 .my-info-item{
@@ -481,7 +481,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5rem;
-    padding-left: 10rem;
+    padding-left: 7vw;
         &-item:nth-child(1){
             width: 100%;
             font-size: 1.5rem;
@@ -512,7 +512,7 @@ footer{
 .user-info-item{
     font-size: 3rem;
        &:first-child{
-            width: 100%
+            width: 90%
         }
 }
 /*review-form*/
@@ -535,12 +535,13 @@ footer{
     }
     & button{
         @include rounded;
-        border: 2px solid var(--yellow-hard);
+        border: 2px solid $purple-basic;
         outline:none;
         width: 50%;
         margin: 2rem auto;
         cursor: pointer;
         font-size: 3rem;
+        
     }
 }
 
@@ -619,20 +620,22 @@ footer{
         & .nav-link-item{
             margin: 20% 0;
             font-size: 3rem;
-            width: 50%
+            width: 50%;
+            color: $purple-basic
         }
         & .nav-list{
             display: flex;
             position: fixed;
             z-index: 100;
             width: 100vw;
-            height: 110vh;
+            height: 105vh;
             left: 0;
             top:0;
-            background: var(--font-color);
+            background: $font-color;
             flex-direction: column;
             justify-content: space-around;
             padding:  5rem 0;
+            box-sizing: border-box;
             margin: 0 auto;
             align-items: center;
             transition:  all 0.5s ease; 
@@ -645,7 +648,7 @@ footer{
   
 }
     .banner-descr{
-        width: 70%;
+        width: 80%;
         font-size: 4rem;
          padding: 7rem;
         line-height: 8rem;
@@ -700,6 +703,15 @@ footer{
         font-size: 1.5rem;
         height: 100%;
     }
+     .short-btn{
+        width: 80%;
+         margin: 1rem auto;
+         
+    }
+      .my-info-item{
+          
+}
+    
 
 
 
@@ -709,6 +721,14 @@ footer{
     .short-btn{
         font-size: 2rem;
         margin: 1rem 0;
+    }
+    
+    .my-info-item{
+        width: 80vw;
+    }
+  
+    .review-form button{
+        width: 70%;
     }
     .user-pic{
         background: var(--gray-basic);
@@ -720,7 +740,7 @@ footer{
      .banner-descr{
         font-size: 3rem;
          padding:10rem 2rem;
-         width: 80%;
+         width: 90%;
          line-height: 7rem;
          
 }
@@ -738,6 +758,7 @@ footer{
     .my-user-info{
         padding-left:0;
         margin: 0 auto;
+        width: 100%;
     }
     .search-bar{
         width: 90%;
@@ -815,8 +836,7 @@ footer{
 @media only screen and (max-width:320px){
       .banner-descr{
               width: 90%;
-              font-size: 2.5rem;
-              padding:2.5rem; 
+              font-size: 2rem;
               line-height: 7rem;
 }
     .list-product-price{

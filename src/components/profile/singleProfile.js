@@ -21,9 +21,9 @@ return(
                />
     
             <div className="my-user-info">
-                <div className="my-info-item">имя пользывателя:{ReviewsOfUSers.senderName}</div>
-                <div className="my-info-item">возраст:{ReviewsOfUSers.age}</div>
-                <div className="my-info-item">о себе:{ReviewsOfUSers.description}
+                <div className="my-info-item">имя пользывателя: {ReviewsOfUSers.senderName}</div>
+                <div className="my-info-item">возраст: {ReviewsOfUSers.age}</div>
+                <div className="my-info-item">о себе: {ReviewsOfUSers.description}
 
                 </div>
             </div>
